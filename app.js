@@ -92,8 +92,8 @@ function playRound(playerSelection, computerSelection) {
     keep score
     report a winner
     5 rounds */
-/*function playGame() {
-    console.log(playRound(getPlayerChoice(), getComputerChoice()));
+function playGame() {
+    /*console.log(playRound(getPlayerChoice(), getComputerChoice()));
     console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
     console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
@@ -102,7 +102,7 @@ function playRound(playerSelection, computerSelection) {
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
     console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
+    console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);*/
 
     if (cpuPoints > pPoints) {
         console.log('The BOT has won!')
@@ -111,12 +111,21 @@ function playRound(playerSelection, computerSelection) {
         console.log('You win!')
     }
 }
-console.log(playGame());*/
+console.log(playGame());
 
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         alert(button.id);
+        if(button.id == 'rock') {
+            alert('first');
+        }
+        else if(button.id == 'paper') {
+            alert('second');
+        }
+        else if(button.id == 'scissors') {
+            alert('third');
+        }
     })
 })
