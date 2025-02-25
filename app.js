@@ -3,7 +3,7 @@
    to then understand which helps you learn more and understand
    more. Learning is challenging but the growth is exponentional */
 
-function getComputerChoice() {
+/*function getComputerChoice() {
     let number = Math.floor(Math.random() * 3) + 1;
     //console.log(number);
     if (number == 1) {
@@ -19,10 +19,10 @@ function getComputerChoice() {
         choice = 'Computer choice is invalid';
     }
     return choice;
-}
+}*/
 //console.log(getComputerChoice());
 
-function getPlayerChoice() {
+/*function getPlayerChoice() {
     let playerInput = prompt('Type your choice!')
 
     if (playerInput.toLowerCase() == 'rock') {
@@ -37,13 +37,13 @@ function getPlayerChoice() {
     else {
         return 'That is not a valid option.';
     }
-}
+}*/
 //console.log(getPlayerChoice());
 /*  set the rules on what beats what
     set the win conditions
     based on win add a score */
-    let cpuPoints = 0;
-    let pPoints = 0;
+/*let cpuPoints = 0;
+let pPoints = 0;
 function playRound(playerSelection, computerSelection) {
     if((playerSelection == 'rock') && (computerSelection == 'paper')) {
         //Add point to computer here
@@ -82,7 +82,7 @@ function playRound(playerSelection, computerSelection) {
     else {
         return `This round cannot be played! ${playerSelection}`;
     }
-}
+}*/
 
 //let playerSelection = getPlayerChoice();
 //let computerSelection = getComputerChoice();
@@ -92,9 +92,7 @@ function playRound(playerSelection, computerSelection) {
     keep score
     report a winner
     5 rounds */
-function playGame() {
-    /*console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
+/*function playGame() {
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
     console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
@@ -102,7 +100,9 @@ function playGame() {
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
     console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
     console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);*/
+    console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
+    console.log(playRound(getPlayerChoice(), getComputerChoice()));
+    console.log(`CPU Score ${cpuPoints}`, `Player Score ${pPoints}`);
 
     if (cpuPoints > pPoints) {
         console.log('The BOT has won!')
@@ -111,21 +111,26 @@ function playGame() {
         console.log('You win!')
     }
 }
-console.log(playGame());
+console.log(playGame());*/
 
+// Start over using the DOM for interactivity
 const buttons = document.querySelectorAll("button");
-
+let playerSelection = '';
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        alert(button.id);
+        //alert(button.id);
         if(button.id == 'rock') {
-            alert('first');
+            //alert('first');
+            playerSelection = 'rock';
         }
         else if(button.id == 'paper') {
-            alert('second');
+            //alert('second');
+            playerSelection = 'paper';
         }
         else if(button.id == 'scissors') {
-            alert('third');
+            //alert('third');
+            playerSelection = 'scissors';
         }
+        console.log(playerSelection);
     })
 })
