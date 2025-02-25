@@ -141,13 +141,13 @@ buttons.forEach((button) => {
 function playRound() {
     getComputerChoice();
     if(playerSelection == 'rock' && cpuChoice == 'scissors') {
-        alert('You Win!');
+        alert('Won against scissors');
     }
-    else if(playerSelection == 'paper') {
-        alert('FATALITY');
+    else if(playerSelection == 'paper' && cpuChoice == 'rock') {
+        alert('Won against rock');
     }
-    else if(playerSelection == 'scissors') {
-        alert('BRUTALITY');
+    else if(playerSelection == 'scissors' && cpuChoice == 'paper') {
+        alert('Won against paper');
     }
     else {
         alert('You Lose!');
