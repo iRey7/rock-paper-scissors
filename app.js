@@ -134,12 +134,13 @@ buttons.forEach((button) => {
             playerSelection = 'scissors';
             playRound();
         }
-        console.log(playerSelection);
+        //console.log(playerSelection);
     })
 })
 
 function playRound() {
-    if(playerSelection == 'rock') {
+    getComputerChoice();
+    if(playerSelection == 'rock' && cpuChoice == 'scissors') {
         alert('You Win!');
     }
     else if(playerSelection == 'paper') {
@@ -151,4 +152,23 @@ function playRound() {
     else {
         alert('You Lose!');
     }
+}
+
+let cpuChoice = '';
+function getComputerChoice() {
+    let number = Math.floor(Math.random() * 3) + 1;
+    //console.log(number);
+    if (number == 1) {
+        cpuChoice = 'rock';
+    }
+    else if (number == 2) {
+        cpuChoice = 'paper';
+    }
+    else if(number == 3) {
+        cpuChoice = 'scissors';
+    }
+    else {
+        cpuChoice = 'Computer choice is invalid';
+    }
+    return cpuChoice;
 }
