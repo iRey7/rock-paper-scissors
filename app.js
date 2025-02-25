@@ -122,15 +122,33 @@ buttons.forEach((button) => {
         if(button.id == 'rock') {
             //alert('first');
             playerSelection = 'rock';
+            playRound();
         }
         else if(button.id == 'paper') {
             //alert('second');
             playerSelection = 'paper';
+            playRound();
         }
         else if(button.id == 'scissors') {
             //alert('third');
             playerSelection = 'scissors';
+            playRound();
         }
         console.log(playerSelection);
     })
 })
+
+function playRound() {
+    if(playerSelection == 'rock') {
+        alert('You Win!');
+    }
+    else if(playerSelection == 'paper') {
+        alert('FATALITY');
+    }
+    else if(playerSelection == 'scissors') {
+        alert('BRUTALITY');
+    }
+    else {
+        alert('You Lose!');
+    }
+}
