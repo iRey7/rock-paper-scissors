@@ -116,6 +116,8 @@ console.log(playGame());*/
 // Start over using the DOM for interactivity
 const buttons = document.querySelectorAll("button");
 let playerSelection = '';
+let cpuPoints = 0;
+let playerPoints = 0;
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         //alert(button.id);
@@ -142,16 +144,22 @@ function playRound() {
     getComputerChoice();
     if(playerSelection == 'rock' && cpuChoice == 'scissors') {
         alert('Won against scissors');
+        playerPoints += 1;
     }
     else if(playerSelection == 'paper' && cpuChoice == 'rock') {
         alert('Won against rock');
+        playerPoints += 1;
     }
     else if(playerSelection == 'scissors' && cpuChoice == 'paper') {
         alert('Won against paper');
+        playerPoints += 1;
     }
     else {
         alert('You Lose!');
+        cpuPoints += 1;
     }
+    //console.log('P1: ' + playerPoints);
+    //console.log('CPU: ' + cpuPoints);
 }
 
 let cpuChoice = '';
